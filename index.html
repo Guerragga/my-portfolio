@@ -1,170 +1,423 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Guerra</title>
-    <link rel="icon" href="./img/logo_site.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfólio de Gabriel Guerra, desenvolvedor Full Stack focado em Python, backend, APIs, automações e integrações.">
+  <meta name="theme-color" content="#0b0d0e">
+  <meta name="color-scheme" content="dark">
+  <title>Gabriel Guerra — Full Stack Developer</title>
+  <link rel="icon" href="./img/logo_site.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
 </head>
 <body>
-    <header id="header">
-        <div class="logo">
-            <a href="#"><img src="./img/my_logo_wb.png" alt="Logo Gabriel Guerra"></a>
-            <a href="#"><h2>Gabriel Guerra</h2></a>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner">
+      <a class="brand" href="#home" aria-label="Gabriel Guerra — início">
+        <img src="./img/my_logo_wb.png" alt="" width="48" height="48">
+        <span class="brand__text">Gabriel Guerra</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation" data-menu-toggle>
+        <span class="sr-only">Abrir menu</span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Navegação principal" data-nav>
+        <a href="#about">Sobre</a>
+        <a href="#expertise">Atuação</a>
+        <a href="#projects">Projetos</a>
+        <a href="#process">Processo</a>
+        <a class="site-nav__contact" href="#contact">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--one" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--two" aria-hidden="true"></div>
+
+      <div class="container hero__layout">
+        <div class="hero__content" data-reveal>
+          <p class="availability">
+            <span class="availability__dot" aria-hidden="true"></span>
+            Aberto a oportunidades
+          </p>
+
+          <p class="eyebrow">Full Stack Developer · Brasil</p>
+
+          <h1 id="hero-title">
+            Sistemas que organizam trabalho, conectam <em>APIs</em> e resolvem problemas reais.
+          </h1>
+
+          <p class="hero__intro">
+            Sou Gabriel Guerra. Trabalho principalmente com Python, PHP e JavaScript, construindo aplicações web, integrações e automações com foco em código claro, manutenção e valor para o negócio.
+          </p>
+
+          <div class="hero__actions">
+            <a class="button button--primary" href="#projects">Ver projetos</a>
+            <a class="button button--secondary" href="mailto:guerra.gabrieldev@gmail.com">Falar comigo <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <dl class="hero__focus" aria-label="Áreas de foco">
+            <div>
+              <dt>01</dt>
+              <dd>Backend & APIs</dd>
+            </div>
+            <div>
+              <dt>02</dt>
+              <dd>Automações</dd>
+            </div>
+            <div>
+              <dt>03</dt>
+              <dd>Full Stack</dd>
+            </div>
+          </dl>
         </div>
-        <nav class="nav">
-            <ul class="nav-bar">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
-                <li><a href="#blog">Insights</a></li>
-                <li><a href="#Contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <img class="banner" src="./img/Wallpaper GGA.png" alt="">
-        <div class="social-media">
+
+        <aside class="code-window" aria-label="Resumo técnico" data-reveal>
+          <div class="code-window__bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <p>profile.py</p>
+          </div>
+          <pre><code><span class="code-muted">class</span> <span class="code-accent">Developer</span>:
+    name = <span class="code-string">"Gabriel Guerra"</span>
+    focus = [
+        <span class="code-string">"backend"</span>,
+        <span class="code-string">"APIs"</span>,
+        <span class="code-string">"automation"</span>,
+    ]
+
+    stack = {
+        <span class="code-string">"core"</span>: [<span class="code-string">"Python"</span>, <span class="code-string">"PHP"</span>],
+        <span class="code-string">"web"</span>: [<span class="code-string">"Flask"</span>, <span class="code-string">"JavaScript"</span>],
+        <span class="code-string">"data"</span>: [<span class="code-string">"MySQL"</span>],
+    }
+
+    principle = <span class="code-string">"solve first, code second"</span></code></pre>
+          <div class="code-window__status">
+            <span aria-hidden="true">●</span>
+            ready to build
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Sobre // 01</p>
+          <h2 id="about-title">Tecnologia começa pelo problema, não pela ferramenta.</h2>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-photo" data-reveal>
+            <img src="./img/My-photo.png" alt="Gabriel Guerra" width="620" height="760" loading="lazy" decoding="async">
+            <span class="about-photo__caption">Gabriel Guerra · Full Stack Developer</span>
+          </div>
+
+          <div class="about-content" data-reveal>
+            <p class="about-content__lead">
+              Gosto de entender o processo antes de escrever código. Meu foco é transformar fluxos confusos e tarefas repetitivas em sistemas, APIs e automações mais simples de operar e manter.
+            </p>
+
+            <p>
+              Atuo com desenvolvimento full stack, backend e integrações. Minha experiência inclui Python, PHP, Flask, CodeIgniter, JavaScript, MySQL, CRMs, webhooks, Google Sheets e automações com n8n. No frontend, uso a base visual para entregar interfaces organizadas, responsivas e fáceis de usar.
+            </p>
+
+            <div class="about-links">
+              <a href="https://github.com/Guerragga" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+              <a href="https://www.linkedin.com/in/gabriel-guerra-b93238219/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack-grid" aria-label="Tecnologias e ferramentas" data-reveal>
+          <div class="stack-group">
+            <p>Backend</p>
             <ul>
-                <li><a href="https://www.instagram.com/guerragga_dev/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://github.com/guerragga" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li><a href="mailto:guerra.gabrieldev@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/guerragga/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
-                <li><a href="https://www.behance.net/gabrielguerra40" target="_blank"><i class="fa-brands fa-behance"></i></a></li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>Flask</li>
+              <li>CodeIgniter</li>
             </ul>
+          </div>
+          <div class="stack-group">
+            <p>Frontend</p>
+            <ul>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Angular</li>
+              <li>HTML & CSS</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <p>Dados & integração</p>
+            <ul>
+              <li>MySQL</li>
+              <li>REST APIs</li>
+              <li>Webhooks</li>
+              <li>Google Sheets</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <p>Workflow</p>
+            <ul>
+              <li>Git & GitHub</li>
+              <li>n8n</li>
+              <li>Docker</li>
+              <li>Figma</li>
+            </ul>
+          </div>
         </div>
-        <div class="main-content-home">
-            <h1>Gabriel Guerra</h1>
-            <h2>I am <span id='text'></span></h2>
-        </div>
-        <div class="arrow-down"><i class="fa-solid fa-chevron-down"></i></div>
+      </div>
     </section>
 
-    <section id="about-me">
-        <div class="main-content-about">
-            <div class="perfil">
-                <img src="./img/My-photo.png" alt="Gabriel Guerra Photo">
-            </div>
-            <div class="content-about">
-                <h3>Sobre mim</h3>
-                <h2>Design + Código com foco em impacto</h2>
-                <p>Olá! Sou Gabriel Guerra, profissional de tecnologia com perfil criativo, analítico e orientado a resultados. Estruturo experiências digitais que conectam estratégia, usabilidade e identidade visual — transformando ideias em interfaces claras, performáticas e memoráveis. Minha atuação combina Front-end (HTML, CSS, JavaScript, TypeScript e React) com UX/UI para entregar produtos com alto padrão visual e foco em conversão.</p>
-                <div class="skills">
-                    <div class="devskills">
-                        <h3>Dev Skills</h3>
-                        <img src="./img/HTML5-logo.png" alt="">
-                        <img src="./img/css-logo.png" alt="">
-                        <img src="./img/javascript-logo.png" alt="">
-                        <img src="./img/Typescript_logo.png" alt="">
-                        <img src="./img/react-logo.png" alt="">
-                    </div>
-                    <div class="designskills">
-                        <h3>Design Skills</h3>
-                        <img src="./img/canva-icon.png" alt="">
-                        <img src="./img/figma-logo.png" alt="">
-                        <img src="./img/adobe-photoshop-logo.png" alt="">
-                    </div>
-                </div>
-                <button class="btn">Download CV</button>
-            </div>
+    <section class="section" id="expertise" aria-labelledby="expertise-title">
+      <div class="container">
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">Atuação // 02</p>
+            <h2 id="expertise-title">Do backend à interface, sem perder o contexto do negócio.</h2>
+          </div>
+          <p>
+            Meu objetivo não é acumular tecnologias no projeto. É escolher uma arquitetura simples o suficiente para evoluir e robusta o suficiente para resolver a necessidade real.
+          </p>
         </div>
+
+        <div class="expertise-grid">
+          <article class="expertise-card" data-reveal>
+            <span class="expertise-card__number">01</span>
+            <h3>Backend & APIs</h3>
+            <p>Estruturação de regras de negócio, endpoints, validações, persistência e integrações com serviços externos.</p>
+            <ul>
+              <li>Python / Flask</li>
+              <li>PHP / CodeIgniter</li>
+              <li>REST / Webhooks</li>
+              <li>MySQL</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal>
+            <span class="expertise-card__number">02</span>
+            <h3>Automação & integração</h3>
+            <p>Conexão entre ferramentas e redução de tarefas manuais com fluxos que tornam processos operacionais mais previsíveis.</p>
+            <ul>
+              <li>n8n</li>
+              <li>CRMs</li>
+              <li>Google Sheets</li>
+              <li>APIs de terceiros</li>
+            </ul>
+          </article>
+
+          <article class="expertise-card" data-reveal>
+            <span class="expertise-card__number">03</span>
+            <h3>Frontend & experiência</h3>
+            <p>Interfaces responsivas e acessíveis, com hierarquia clara e implementação coerente com o comportamento esperado do produto.</p>
+            <ul>
+              <li>JavaScript / TypeScript</li>
+              <li>Angular</li>
+              <li>HTML semântico</li>
+              <li>UX/UI</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="services">
-        <div class="tittle-services"><h2>Serviços</h2></div>
-        <div class="cards-services-container">
-            <div class="card-service">
-                <i class="fa-solid fa-code"></i>
-                <h3>Desenvolvimento Front-end Responsivo</h3>
-                <p>• Desenvolvimento de interfaces de usuário responsivas para websites e aplicativos web, garantindo uma experiência consistente em uma variedade de dispositivos e tamanhos de tela.</p>
-                <p>• Implementação de designs de alta qualidade utilizando HTML, CSS e JavaScript, com foco na usabilidade e na acessibilidade.</p>
-            </div>
-            <div class="card-service">
-                <i class="fa-regular fa-object-ungroup"></i>
-                <h3>Design de Interfaces Web e Mobile</h3>
-                <p>• Criação de designs visuais atraentes e intuitivos para websites, aplicativos móveis e aplicações web.</p>
-                <p>• Desenvolvimento de layouts adaptáveis e componentes de interface de usuário para proporcionar uma experiência de usuário superior em diferentes plataformas e dispositivos.</p>
-            </div>
-                <div class="card-service">
-                    <i class="fa-solid fa-mobile"></i>
-                    <h3>Design e Prototipagem de Apps</h3>
-                    <p>• Design visual e funcional de aplicativos móveis para iOS e Android, com atenção aos padrões de design específicos de cada plataforma.</p>
-                    <p>• Prototipagem interativa de aplicativos móveis para validar conceitos e iterar sobre o design antes da implementação.</p>
-                </div>
+    <section class="section section--projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="eyebrow">Projetos // 03</p>
+            <h2 id="projects-title">Código que mostra evolução, não placeholders.</h2>
+          </div>
+          <p>
+            Uma seleção de projetos públicos com contextos diferentes: backend em Python, aplicações web, interface desktop e experimentação visual.
+          </p>
         </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-card--featured" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__type">Python · Discord Bot</p>
+              <span class="project-card__status">Projeto recente</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Nice Dice</h3>
+              <p>
+                Bot para RPG com comandos slash, suporte a múltiplos idiomas, rolagens secretas, vantagem/desvantagem, dados explosivos, histórico e modo de acessibilidade com TTS.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologias do Nice Dice">
+                <li>Python</li>
+                <li>discord.py</li>
+                <li>i18n</li>
+                <li>unittest</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="https://github.com/Guerragga/nice-dice" target="_blank" rel="noreferrer" aria-label="Abrir repositório Nice Dice no GitHub">
+                Ver repositório <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__type">Angular · TypeScript</p>
+              <span class="project-card__index">02</span>
+            </div>
+            <div class="project-card__body">
+              <h3>CRUD de profissionais</h3>
+              <p>
+                Aplicação criada a partir de um desafio técnico para gerenciar profissionais de saúde, com Angular 17, Angular Material, formulários e estrutura preparada para SSR com Express.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologias do CRUD">
+                <li>Angular 17</li>
+                <li>TypeScript</li>
+                <li>Material</li>
+                <li>SSR</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="https://github.com/Guerragga/crud-teste" target="_blank" rel="noreferrer" aria-label="Abrir repositório CRUD no GitHub">
+                Ver repositório <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__type">HTML · CSS · JavaScript</p>
+              <span class="project-card__index">03</span>
+            </div>
+            <div class="project-card__body">
+              <h3>NieR Parallax Experience</h3>
+              <p>
+                Estudo de frontend inspirado em NieR: Automata, criado para explorar composição visual em camadas e efeito parallax no navegador.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologias do projeto Parallax">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Parallax</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="https://github.com/Guerragga/Parallax-Effect-Website" target="_blank" rel="noreferrer" aria-label="Abrir repositório NieR Parallax no GitHub">
+                Ver repositório <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal>
+            <div class="project-card__top">
+              <p class="project-card__type">Python · Desktop</p>
+              <span class="project-card__index">04</span>
+            </div>
+            <div class="project-card__body">
+              <h3>TodoList PySimpleGUI</h3>
+              <p>
+                Aplicação desktop para gerenciamento de tarefas, desenvolvida como estudo de interfaces gráficas e estado de aplicação em Python.
+              </p>
+              <ul class="project-tags" aria-label="Tecnologias da TodoList">
+                <li>Python</li>
+                <li>PySimpleGUI</li>
+                <li>CRUD</li>
+                <li>Desktop</li>
+              </ul>
+            </div>
+            <div class="project-card__footer">
+              <a href="https://github.com/Guerragga/TodoList-PySimpleGUI" target="_blank" rel="noreferrer" aria-label="Abrir repositório TodoList no GitHub">
+                Ver repositório <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-more" data-reveal>
+          <p>Quer ver código, commits e outros experimentos?</p>
+          <a class="text-link" href="https://github.com/Guerragga?tab=repositories" target="_blank" rel="noreferrer">
+            Explorar todos os repositórios <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
     </section>
 
-    <section id="portfolio">
-        <div class="tittle-portfolio"><h2>Portfólio</h2></div>
-        <div class="container-portfolio">
-            <div class="dev-tittle"><h3>Desenvolvimento Front-end</h3></div>
-            <div class="container-dev">
-                <div class="card-port">
-                    <img src="./img/website-nier.png" alt="">
-                    <h3>Nier Parallax-Effect</h3>
-                    <p>This project was made with the proposal of learning about the parallax effect on websites, I did it with the theme of a game that I like. Hope you like it.</p>
-                </div>
-                <div class="card-port">
-                    <img src="./img/Portfólio light-dark.png" alt="">
-                    <h3>Portfólio light/dark</h3>
-                    <p>This is my portfolio page project, developed with front-end technologies, an elegant and modern website, custom design, smooth animations to demonstrate some of my work.</p>
-                    <a href=""></a>
-                </div>
-                <div class="card-port">
-                        <img src="./img/galaxy_3.jpg" alt="">
-                        <h3>Project 3</h3>
-                        <p>description</p>
-                </div>
-                <button class="btn-card">View More</button>
-            </div>
-            <div class="design-tittle"><h3>Design</h3></div>
-            <div class="container-design">
-                <button class="btn-card">View More</button>
-                <div class="card-port">
-                    <img src="./img/leaf_nature_1.jpg" alt="">
-                    <h3>Project 1</h3>
-                    <p>description</p>
-                </div>
-                <div class="card-port">
-                    <img src="./img/leaf_nature_2.jpg" alt="">
-                    <h3>Project 1</h3>
-                    <p>description</p>
-                </div>
-                <div class="card-port">
-                    <img src="./img/leaf_nature_3.jpg" alt="">
-                    <h3>Project 1</h3>
-                    <p>description</p>
-                </div>
-            </div>
-            <div class="design-mobile-tittle"><h3>Design mobile</h3></div>
-            <div class="container-design-mobile">
-                    <div class="card-port">
-                        <img src="./img/geometric_1.jpg" alt="">
-                        <h3>Project 1</h3>
-                        <p>description</p>
-                    </div>
-                    <div class="card-port">
-                        <img src="./img/geometric_2.png" alt="">
-                        <h3>Project 1</h3>
-                        <p>description</p>
-                    </div>
-                        <div class="card-port">
-                            <img src="./img/geometric_3.jpg" alt="">
-                            <h3>Project 1</h3>
-                            <p>description</p>
-                        </div>
-                    <button class="btn-card">View More</button>
-            </div>
+    <section class="section" id="process" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Processo // 04</p>
+          <h2 id="process-title">Clareza antes de complexidade.</h2>
         </div>
+
+        <ol class="process-list">
+          <li data-reveal>
+            <span>01</span>
+            <div>
+              <h3>Entender</h3>
+              <p>Mapear o problema, as pessoas envolvidas, o fluxo atual e o resultado esperado antes de escolher a tecnologia.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span>02</span>
+            <div>
+              <h3>Estruturar</h3>
+              <p>Separar responsabilidades, definir dados, integrações e caminhos críticos com o mínimo de abstração necessária.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span>03</span>
+            <div>
+              <h3>Implementar</h3>
+              <p>Construir em etapas pequenas, com nomes claros, validação de entrada e decisões que facilitem manutenção futura.</p>
+            </div>
+          </li>
+          <li data-reveal>
+            <span>04</span>
+            <div>
+              <h3>Validar</h3>
+              <p>Testar os fluxos importantes, revisar comportamento em diferentes cenários e documentar o que outra pessoa precisa saber.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
-    <section id="blog"><h1>Work in Progress</h1></section> 
-    <section id="Contato"></section>
 
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner" data-reveal>
+        <p class="eyebrow">Contato // 05</p>
+        <h2 id="contact-title">Tem um problema interessante para resolver?</h2>
+        <p>
+          Estou aberto a oportunidades em desenvolvimento Full Stack, Backend, Python/PHP, APIs e automação.
+        </p>
 
-    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-    <script src="./script.js"></script>
+        <a class="contact__email" href="mailto:guerra.gabrieldev@gmail.com">
+          guerra.gabrieldev@gmail.com
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <div class="contact__links" aria-label="Redes profissionais">
+          <a href="https://github.com/Guerragga" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/gabriel-guerra-b93238219/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.instagram.com/guerragga_dev/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span data-current-year>2026</span> Gabriel Guerra.</p>
+      <p>Construído com HTML, CSS e JavaScript.</p>
+      <a href="#home">Voltar ao topo ↑</a>
+    </div>
+  </footer>
 </body>
 </html>
