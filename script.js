@@ -2,6 +2,7 @@
   const header = document.querySelector("[data-header]");
   const menuToggle = document.querySelector("[data-menu-toggle]");
   const navigation = document.querySelector("[data-nav]");
+  const menuLines = menuToggle ? [...menuToggle.querySelectorAll('span[aria-hidden="true"]')] : [];
   const navLinks = navigation ? [...navigation.querySelectorAll('a[href^="#"]')] : [];
   const revealElements = [...document.querySelectorAll("[data-reveal]")];
   const yearElement = document.querySelector("[data-current-year]");
@@ -18,6 +19,11 @@
     menuToggle.setAttribute("aria-expanded", String(open));
     navigation.classList.toggle("is-open", open);
     document.body.classList.toggle("menu-open", open);
+
+    if (menuLines.length === 2) {
+      menuLines[0].style.transform = open ? "translateY(3px) rotate(45deg)" : "";
+      menuLines[1].style.transform = open ? "translateY(-3px) rotate(-45deg)" : "";
+    }
 
     const label = menuToggle.querySelector(".sr-only");
     if (label) {
